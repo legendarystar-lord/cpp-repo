@@ -1,0 +1,4 @@
+﻿  Drill.cpp
+c:\users\user\desktop\programming - principles and practices using c++\vectors\drill\drill.cpp(69): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\drill\drill.cpp(74): warning C4018: '<': signed/unsigned mismatch
+  Drill.vcxproj -> C:\Users\User\Desktop\Programming - Principles and Practices using C++\Vectors\Debug\Drill.exe
