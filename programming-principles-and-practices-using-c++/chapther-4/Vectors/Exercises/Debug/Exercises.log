@@ -1,5 +1,5 @@
 ﻿  Source.cpp
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(30): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(24): warning C4700: uninitialized local variable 'total' used
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(251): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(245): warning C4700: uninitialized local variable 'total' used
   Source.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Exercises.vcxproj -> C:\Users\User\Desktop\Programming - Principles and Practices using C++\Vectors\Debug\Exercises.exe
