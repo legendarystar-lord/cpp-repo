@@ -1,5 +1,18 @@
 ﻿  Source.cpp
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(251): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(245): warning C4700: uninitialized local variable 'total' used
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(100): warning C4244: 'argument': conversion from 'double' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(107): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(148): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(158): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(194): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(233): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(248): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(267): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(282): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(293): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(558): warning C4700: uninitialized local variable 'total' used
   Source.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Exercises.vcxproj -> C:\Users\User\Desktop\Programming - Principles and Practices using C++\Vectors\Debug\Exercises.exe

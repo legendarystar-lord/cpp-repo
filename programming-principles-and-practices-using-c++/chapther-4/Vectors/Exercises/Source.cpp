@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
-#include<algorithm>
-#include<string>
-#include<iomanip>
+#include <algorithm>
+#include <string>
+#include <iomanip>
+#include <cstdlib>
+#include <time.h>
 
 using namespace std;
 
@@ -14,6 +16,14 @@ void DigitConverter();
 void MiniCalculator();
 void DoubleUp();
 void WheatChessboardProblemIntAndDbl();
+void RockPaperScissors();
+void Primes();
+void PrimesMax();
+void SieveOfEratosthenes();
+void SieveOfEratosthenesMax();
+bool isPrime(int n);
+void PrimesToN();
+void GetMode();
 
 int main()
 {
@@ -51,13 +61,316 @@ int main()
 	case 9:
 		WheatChessboardProblemIntAndDbl();
 		break;
+	case 10:
+		RockPaperScissors();
+		break;
+	case 11:
+		Primes();
+		break;
+	case 12:
+		PrimesMax();
+		break;
+	case 13:
+		SieveOfEratosthenes();
+		break;
+	case 14:
+		SieveOfEratosthenesMax();
+		break;
+	case 15:
+		PrimesToN();
+		break;
+	case 16:
+		GetMode();
+		break;
 	default:
 		break;
 	}
-
-
+	
+	
 
 	return 0;
+}
+
+void GetMode()
+{
+	int tempCount = 1, mode = 1;
+	vector<int> nums;
+	for (double temp; cin >> temp; )
+	{
+		nums.push_back(temp);
+	}
+
+	sort(nums.begin(), nums.end());
+
+	int lastNumber = nums[0];
+
+	for (int i = 1; i < nums.size(); ++i)
+	{
+		if (lastNumber == nums[i])
+		{
+			++tempCount;
+		}
+		else
+		{
+			lastNumber = nums[i];
+			if (tempCount > mode)
+			{
+				mode = tempCount;
+			}
+			tempCount = 0;
+		}
+	}
+
+	cout << mode << "\n";
+}
+
+bool isPrime(int n)
+{
+	// Corner case 
+	if (n <= 1)
+		return false;
+
+	// Check from 2 to n-1 
+	for (int i = 2; i < n; i++)
+		if (n % i == 0)
+			return false;
+
+	return true;
+}
+
+void PrimesToN()
+{
+	int n;
+	cin >> n;
+	vector<int> primes;
+	primes.push_back(2);
+	int currentNum = 3;
+	while (primes.size() < n)
+	{
+		if (isPrime(currentNum))
+		{
+			primes.push_back(currentNum);
+		}
+
+		currentNum++;
+	}
+
+	for (int i = 0; i < primes.size(); i++)
+	{
+		if (i % 10 == 0)
+		{
+			cout << "\n";
+		}
+
+		cout << setw(3) << primes[i] << " ";
+	}
+
+	cout << "\n" << primes.size() << "\n";
+}
+
+void SieveOfEratosthenesMax()
+{
+	int max;
+	cin >> max;
+	vector<int> sieve;
+	vector<int> primes;
+
+	for (int i = 1; i < max + 1; ++i)
+	{
+		sieve.push_back(i);
+	}
+	sieve[0] = 0;
+	for (int i = 2; i < max + 1; ++i) 
+	{
+		if (sieve[i - 1] != 0) 
+		{
+			primes.push_back(sieve[i - 1]);
+			for (int j = 2 * sieve[i - 1]; j < max + 1; j += sieve[i - 1])
+			{
+				sieve[j - 1] = 0;
+			}
+		}
+	}
+	for (int i = 0; i < primes.size(); i++)
+	{
+		if (i % 10 == 0)
+		{
+			cout << "\n";
+		}
+		cout << setw(10) << primes[i] << " ";
+	}
+}
+
+void SieveOfEratosthenes()
+{
+	const int size = 100;
+	int arr[size] = { 0 };
+	for (int i = 2; i < size; i++) 
+	{
+		for (int j = i * i; j < size; j += i) 
+		{
+			arr[j - 1] = 1;
+		}
+	}
+	for (int i = 1; i < size; i++) 
+	{
+		if (arr[i - 1] == 0)
+		{
+			cout << i << " ";
+		}
+	}
+}
+
+void PrimesMax()
+{
+	vector<int> primes;
+	primes.push_back(2);
+	int max;
+	cin >> max;
+	bool flag = false;
+	for (int i = 3; i < max; i++)
+	{
+		for (int j = 0; j < primes.size(); j++)
+		{
+			if (i % primes[j] == 0)
+			{
+				flag = true;
+				break;
+			}
+		}
+		if (!flag)
+		{
+			primes.push_back(i);
+		}
+		flag = false;
+	}
+
+	for (int i = 0; i < primes.size(); i++)
+	{
+		if (i % 10 == 0)
+		{
+			cout << "\n";
+		}
+		cout << setw(10) << primes[i] << " ";
+	}
+
+	cout << "\n";
+}
+
+void Primes()
+{
+	vector<int> primes;
+	primes.push_back(2);
+	bool flag = false;
+	for (int i = 3; i < 100; i++)
+	{
+		for (int j = 0; j < primes.size(); j++)
+		{
+			if (i % primes[j] == 0)
+			{
+				flag = true;
+				break;
+			}
+		}
+		if (!flag)
+		{
+			primes.push_back(i);
+		}
+		flag = false;
+	}
+
+	for (int i = 0; i < primes.size(); i++)
+	{
+		cout << primes[i] << " ";
+	}
+
+	cout << "\n";
+}
+
+void RockPaperScissors()
+{
+	vector<string> rps = { "Rock", "Paper", "Scissors" };
+	srand(time(NULL));
+	string input;
+	cout << "Choose Rock, Paper or Scissors: " << "\n";
+	cin >> input;
+	while (input == "Rock" || input == "Paper" || input == "Scissors")
+	{
+		string compChoice = rps[rand() % 3];
+		int playerChoice;
+		if (input == "Rock")
+		{
+			playerChoice = 1;
+		}
+		else if (input == "Paper")
+		{
+			playerChoice = 2;
+		}
+		else if (input == "Scissors")
+		{
+			playerChoice = 3;
+		}
+
+		switch (playerChoice)
+		{
+		case 1:
+			if (compChoice == "Rock")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "Tie!" << "\n";
+			}
+			else if (compChoice == "Paper")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "You lost!" << "\n";
+			}
+			else if (compChoice == "Scissors")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "You won!" << "\n";
+			}
+			break;
+		case 2:
+			if (compChoice == "Rock")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "You won!" << "\n";
+			}
+			else if (compChoice == "Paper")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "Tie!" << "\n";
+			}
+			else if (compChoice == "Scissors")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "You lost!" << "\n";
+			}
+			break;
+		case 3:
+			if (compChoice == "Rock")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "You lost!" << "\n";
+			}
+			else if (compChoice == "Paper")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "You won!" << "\n";
+			}
+			else if (compChoice == "Scissors")
+			{
+				cout << "The computer choose: " << compChoice << "\n";
+				cout << "Tie!" << "\n";
+			}
+			break;
+		default:
+			break;
+		}
+
+		cout << "Choose Rock, Paper or Scissors: " << "\n";
+		cin >> input;
+	}
 }
 
 void WheatChessboardProblemIntAndDbl()
@@ -248,7 +561,7 @@ void Distances(vector<double> distances)
 
 	double smallestDist = DBL_MAX;
 
-	for (int i = 0; i < distances.size() - 1; i++)
+	for (size_t i = 0; i < distances.size() - 1; i++)
 	{
 		if (distances[i] + distances[i + 1] < smallestDist)
 		{
