@@ -1,18 +1,30 @@
 ﻿  Source.cpp
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(100): warning C4244: 'argument': conversion from 'double' to 'const _Ty', possible loss of data
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(104): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(106): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(106): error C2446: '>': no conversion from 'int' to 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const'
+  c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(106): note: There are no conversions from integral values to pointer-to-member values
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(108): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(108): error C2440: '=': cannot convert from 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' to 'int'
+  c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(108): note: There is no context in which this conversion is possible
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(115): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(117): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(117): error C2446: '<': no conversion from 'int' to 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const'
+  c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(117): note: There are no conversions from integral values to pointer-to-member values
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(119): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(119): error C2440: '=': cannot convert from 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' to 'int'
+  c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(119): note: There is no context in which this conversion is possible
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(130): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(157): warning C4244: 'argument': conversion from 'double' to 'const _Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(107): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(148): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(158): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(194): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(233): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(248): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(267): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(282): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(293): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(558): warning C4700: uninitialized local variable 'total' used
-  Source.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Exercises.vcxproj -> C:\Users\User\Desktop\Programming - Principles and Practices using C++\Vectors\Debug\Exercises.exe
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(164): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(205): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(215): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(251): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(290): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(305): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(324): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(339): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\exercises\source.cpp(350): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
