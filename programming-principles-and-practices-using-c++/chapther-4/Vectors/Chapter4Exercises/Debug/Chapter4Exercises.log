@@ -1,20 +1,9 @@
 ﻿  Source.cpp
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(105): warning C4101: 'imaginaryPart': unreferenced local variable
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(105): warning C4101: 'realPart': unreferenced local variable
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(133): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(136): warning C4018: '>': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(145): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(148): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(161): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(195): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(236): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(246): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(282): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(321): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(336): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(355): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(370): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(381): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(646): warning C4700: uninitialized local variable 'total' used
+c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(117): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(134): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(157): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(177): warning C4101: 'imaginaryPart': unreferenced local variable
+c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(177): warning C4101: 'realPart': unreferenced local variable
+c:\users\user\desktop\programming - principles and practices using c++\vectors\chapter4exercises\source.cpp(723): warning C4700: uninitialized local variable 'total' used
   Source.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Chapter4Exercises.vcxproj -> C:\Users\User\Desktop\Programming - Principles and Practices using C++\Vectors\Debug\Chapter4Exercises.exe

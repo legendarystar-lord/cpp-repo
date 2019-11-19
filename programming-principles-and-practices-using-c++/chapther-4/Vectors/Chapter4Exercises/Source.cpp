@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <time.h>
 #include <cmath>
+#include <iterator>
+#include <sstream>
 
 using namespace std;
 
@@ -27,6 +29,7 @@ void PrimesToN();
 void GetMode();
 void GetMaxMinModeStrSeq();
 void QuadraticFormula();
+void NameValuePair();
 
 int main()
 {
@@ -91,13 +94,82 @@ int main()
 	case 18:
 		QuadraticFormula();
 		break;
+	case 19:
+		NameValuePair();
+		break;
 	default:
 		break;
 	}
 
 	
-
 	return 0;
+}
+
+void NameValuePair()
+{
+	vector<string> names;
+	vector<int> scores;
+	string n;
+	int v;
+
+	while (cin >> n >> v && n != "NoName") 
+	{	// read string int pair
+		for (int i = 0; i < names.size(); ++i)
+		{
+			if (n == names[i])
+			{
+				cout << "duplicate: " << n << "\n"; // check for duplicate
+				break;
+			}
+		}
+		names.push_back(n);
+		scores.push_back(v);
+	}
+
+	cin >> n;
+
+	while (n != "stop")
+	{
+		bool flag = false;
+		for (int i = 0; i < names.size(); i++)
+		{
+			if (n == names[i])
+			{
+				cout << names[i] << " - " << scores[i] << "\n";
+				flag = true;
+				break;
+			}
+		}
+
+		if (!flag)
+		{
+			cout << "name not found" << "\n";
+		}
+
+		cin >> n;
+	}
+
+	cin >> v;
+
+	while (v != 0)
+	{
+		bool flag = false;
+		for (int i = 0; i < scores.size(); i++)
+		{
+			if (v == scores[i])
+			{
+				cout << names[i] << "\n";
+				flag = true;
+			}
+		}
+
+		if (!flag)
+		{
+			cout << "name not found" << "\n";
+		}
+
+		cin >> v;
+	}
 }
 
 void QuadraticFormula()
@@ -130,10 +202,11 @@ void GetMaxMinModeStrSeq()
 	}
 
 	int maxLength = 0;
-	for (int i = 0; i < seq.size(); i++)
+	for (size_t i = 0; i < seq.size(); i++)
 	{
 		string currentWord = seq[i];
-		if (currentWord.length() > maxLength)
+		int currentWordLength = currentWord.length();
+		if (currentWordLength > maxLength)
 		{
 			maxLength = currentWord.length();
 		}
@@ -142,10 +215,11 @@ void GetMaxMinModeStrSeq()
 	cout << maxLength << "\n";
 
 	int minLength = -INT_MIN;
-	for (int i = 0; i < seq.size(); i++)
+	for (size_t i = 0; i < seq.size(); i++)
 	{
 		string currentWord = seq[i];
-		if (currentWord.length() < minLength)
+		int currentWordLength = currentWord.length();
+		if (currentWordLength < minLength)
 		{
 			minLength = currentWord.length();
 		}
@@ -158,7 +232,7 @@ void GetMaxMinModeStrSeq()
 	int count = 1;
 	int countMode = 1;
 
-	for (int i = 1; i < seq.size(); i++)
+	for (size_t i = 1; i < seq.size(); i++)
 	{
 		if (seq[i] == word)
 		{ // count occurrences of the current number
@@ -192,7 +266,7 @@ void GetMode()
 
 	int lastNumber = nums[0];
 
-	for (int i = 1; i < nums.size(); ++i)
+	for (size_t i = 1; i < nums.size(); ++i)
 	{
 		if (lastNumber == nums[i])
 		{
@@ -233,7 +307,8 @@ void PrimesToN()
 	vector<int> primes;
 	primes.push_back(2);
 	int currentNum = 3;
-	while (primes.size() < n)
+	int primesLength = primes.size();
+	while (primesLength < n)
 	{
 		if (isPrime(currentNum))
 		{
@@ -243,7 +318,7 @@ void PrimesToN()
 		currentNum++;
 	}
 
-	for (int i = 0; i < primes.size(); i++)
+	for (size_t i = 0; i < primes.size(); i++)
 	{
 		if (i % 10 == 0)
 		{
@@ -279,7 +354,7 @@ void SieveOfEratosthenesMax()
 			}
 		}
 	}
-	for (int i = 0; i < primes.size(); i++)
+	for (size_t i = 0; i < primes.size(); i++)
 	{
 		if (i % 10 == 0)
 		{
@@ -293,14 +368,14 @@ void SieveOfEratosthenes()
 {
 	const int size = 100;
 	int arr[size] = { 0 };
-	for (int i = 2; i < size; i++)
+	for (size_t i = 2; i < size; i++)
 	{
 		for (int j = i * i; j < size; j += i)
 		{
 			arr[j - 1] = 1;
 		}
 	}
-	for (int i = 1; i < size; i++)
+	for (size_t i = 1; i < size; i++)
 	{
 		if (arr[i - 1] == 0)
 		{
@@ -316,9 +391,10 @@ void PrimesMax()
 	int max;
 	cin >> max;
 	bool flag = false;
+	int primesLength = primes.size();
 	for (int i = 3; i < max; i++)
 	{
-		for (int j = 0; j < primes.size(); j++)
+		for (int j = 0; j < primesLength; j++)
 		{
 			if (i % primes[j] == 0)
 			{
@@ -333,7 +409,7 @@ void PrimesMax()
 		flag = false;
 	}
 
-	for (int i = 0; i < primes.size(); i++)
+	for (size_t i = 0; i < primes.size(); i++)
 	{
 		if (i % 10 == 0)
 		{
@@ -350,9 +426,10 @@ void Primes()
 	vector<int> primes;
 	primes.push_back(2);
 	bool flag = false;
+	int primesLength = primes.size();
 	for (int i = 3; i < 100; i++)
 	{
-		for (int j = 0; j < primes.size(); j++)
+		for (int j = 0; j < primesLength; j++)
 		{
 			if (i % primes[j] == 0)
 			{
@@ -367,7 +444,7 @@ void Primes()
 		flag = false;
 	}
 
-	for (int i = 0; i < primes.size(); i++)
+	for (size_t i = 0; i < primes.size(); i++)
 	{
 		cout << primes[i] << " ";
 	}
@@ -378,7 +455,7 @@ void Primes()
 void RockPaperScissors()
 {
 	vector<string> rps = { "Rock", "Paper", "Scissors" };
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 	string input;
 	cout << "Choose Rock, Paper or Scissors: " << "\n";
 	cin >> input;
@@ -529,7 +606,7 @@ void DoubleUp()
 void MiniCalculator()
 {
 	string input[3];
-	for (int i = 0; i < 3; i++)
+	for (size_t i = 0; i < 3; i++)
 	{
 		cin >> input[i];
 	}
@@ -574,7 +651,7 @@ void DigitConverter()
 void VerySimpleCalculator()
 {
 	string input[3];
-	for (int i = 0; i < 3; i++)
+	for (size_t i = 0; i < 3; i++)
 	{
 		cin >> input[i];
 	}
