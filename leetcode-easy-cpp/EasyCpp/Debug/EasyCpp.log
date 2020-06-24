@@ -1,0 +1,5 @@
+﻿  TwoSum.cpp
+C:\Users\Alek\Desktop\Coding Challenge websites\leetcode\LeetcodeEasyCpp\EasyCpp\TwoSum.cpp(27,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Alek\Desktop\Coding Challenge websites\leetcode\LeetcodeEasyCpp\EasyCpp\TwoSum.cpp(29,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Alek\Desktop\Coding Challenge websites\leetcode\LeetcodeEasyCpp\EasyCpp\TwoSum.cpp(39): warning C4715: 'twoSum': not all control paths return a value
+  EasyCpp.vcxproj -> C:\Users\Alek\Desktop\Coding Challenge websites\leetcode\LeetcodeEasyCpp\Debug\EasyCpp.exe
