@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Alek\Desktop\C++ Book\Technicalities\Technicalities\Source.cpp(50,14): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Alek\Desktop\C++ Book\Technicalities\Technicalities\Source.cpp(50,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Technicalities.vcxproj -> C:\Users\Alek\Desktop\C++ Book\Technicalities\Debug\Technicalities.exe
