@@ -1,0 +1,5 @@
+﻿  Exercise14.cpp
+C:\Users\Alek\Desktop\C++ Book\Technicalities\Exercise14\Exercise14.cpp(17,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Alek\Desktop\C++ Book\Technicalities\Exercise14\Exercise14.cpp(33,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Alek\Desktop\C++ Book\Technicalities\Exercise14\Exercise14.cpp(58,20): warning C4018: '<': signed/unsigned mismatch
+  Exercise14.vcxproj -> C:\Users\Alek\Desktop\C++ Book\Technicalities\Debug\Exercise14.exe

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-double largest_element(vector<double> v)
+double maxv(vector<double>& v)
 {
 	double largest = DBL_MIN;
 	for (int i = 0; i < v.size(); i++)
@@ -26,5 +26,5 @@ int main()
 		nums.push_back(d);
 	}
 
-	cout << largest_element(nums) << endl;
+	cout << maxv(nums) << endl;
 }
